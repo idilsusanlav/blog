@@ -1,0 +1,139 @@
+# Hey, thanks for using my theme. If you like this theme,checkout my repo (https://gitlab.com/avron/gruvhugo"
+# and drop a star while you're at it. ;)
+baseurl = "localhost:1313"
+title = "İdilsu Sanlav"
+languageCode = "en-us"
+paginate = "10" # Number of posts per page
+#disqusShortname = "" # Enable comments by entering your Disqus shortname
+#googleAnalytics = "" # Enable Google Analytics by entering your tracking id
+#-------------------------------------------------------------------------------
+# DEFAULT SETTINGS
+#-------------------------------------------------------------------------------
+
+# Default Theme
+theme= "gruvhugo"
+
+# Default Post Extension
+defaultExtension= "html"
+
+# Default metadata format for newly created frontmatter using
+# hugo new command. "toml", "yaml", or "json"
+metaDataFormat= "yaml"
+
+[taxonomies]
+  tag      = "tags"
+  category = "categories"
+  series   = "series"
+
+[params.main]
+  enabled = true
+  enableKatex = true
+  metaKeywords = "idil, idilsu, idilsusanlav, sanlav, blog"
+  headerTitle = "İdilsu Sanlav"
+  copyright = "© 2023 İdilsu Sanlav.  <a href=\"https://creativecommons.org/licenses/by/4.0/\">Some rights reserved</a>."
+  name = "idilsu_sanlav"
+  img = "img/author.JPG"
+  img_title = "Thanks to Christina @ wocintechchat.com for this photo."
+  icon = "img/logo.png"
+  quote = "Merhaba, ben İdilsu."
+  description= "Burada gerçekleştirdiğim ve gerçekleştirmek istediğim her şey hakkında bir şeyler bulabilirsiniz."
+  licenseUrl = ""
+
+ # Social icons
+  [[params.social]]
+    name = "gitlab"
+    url  = "https://gitlab.com/avron/gruvhugo"
+
+  [[params.social]]
+    name = "email"
+    url  = "mailto:sanlavidilsu@gmail.com"
+
+  [[params.social]]
+    name = "twitter"
+    url  = "https://twitter.com/idilsusanlav"
+
+  [[params.social]]
+    name = "github"
+    url  = "https://github.com/idilsusanlav"
+
+  [[params.social]]
+    name = "linkedin"
+    url  = "https://www.linkedin.com/in/idilsusanlav"
+
+[params.style]
+  # add path to custom CSS files here
+  custom_css = []
+  # add path to custom SCSS files here
+  custom_scss = []
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name       = "About"
+    url        = "about"
+
+  [[menu.main]]
+    identifier = "posts"
+    name       = "Posts"
+    url        = "post/"
+
+[markup]
+  defaultMarkdownHandler = "goldmark"
+  [markup.asciidocExt]
+    backend = "html5"
+    docType = "article"
+    extensions = []
+    failureLevel = "fatal"
+    noHeaderOrFooter = true
+    safeMode = "unsafe"
+    sectionNumbers = false
+    trace = false
+    verbose = true
+    workingFolderCurrent = false
+    [markup.asciidocExt.attributes]
+  [markup.blackFriday]
+    angledQuotes = false
+    footnoteAnchorPrefix = ""
+    footnoteReturnLinkContents = ""
+    fractions = true
+    hrefTargetBlank = false
+    latexDashes = true
+    nofollowLinks = false
+    noreferrerLinks = false
+    plainIDAnchors = true
+    skipHTML = false
+    smartDashes = true
+    smartypants = true
+    smartypantsQuotesNBSP = false
+    taskLists = true
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+    [markup.goldmark.parser]
+      attribute = true
+      autoHeadingID = true
+      autoHeadingIDType = "github"
+    [markup.goldmark.renderer]
+      hardWraps = false
+      unsafe = false
+      xhtml = false
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = "monokai"
+    tabWidth = 4
+  [markup.tableOfContents]
+    endLevel = 3
+    ordered = false
+    startLevel = 2
